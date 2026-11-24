@@ -41,7 +41,7 @@ def validate_lesson(lesson: Lesson) -> None:
 
 def weeks_overlap(w1: str, w2: str) -> bool:
     """Return True if two week types overlap in the semester schedule."""
-    return w1 == w2
+    return w1 == "both" or w2 == "both" or w1 == w2
 
 
 def _is_shared_stream_lecture(existing: Lesson, new_lesson: Lesson) -> bool:
